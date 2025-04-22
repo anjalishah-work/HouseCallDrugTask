@@ -18,8 +18,7 @@ struct MyMedicationsView: View {
             List {
                 ForEach(medications) { med in
                     Button {
-                        // Navigate to Drug Detail
-                        // AppCoordinator.shared.push(.drugDetail(med))
+                         AppCoordinator.shared.push(.drugDetail(med,false))
                     } label: {
                         HStack {
                             Image("img_Pill")

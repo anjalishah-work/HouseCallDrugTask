@@ -11,7 +11,7 @@ enum AppRoute: Hashable {
     case login
     case signup
     case search
-    case drugDetail(DrugModel)
+    case drugDetail(DrugModel, Bool)
 }
 
 

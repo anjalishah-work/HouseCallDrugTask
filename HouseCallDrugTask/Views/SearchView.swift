@@ -50,7 +50,7 @@ struct SearchView: View {
                     drugModel.rxcui = drug.rxcui
                     drugModel.name = drug.name
                     selectedDrug = drugModel
-                    AppCoordinator.shared.push(.drugDetail(drugModel)) // Use AppCoordinator to navigate
+                    AppCoordinator.shared.push(.drugDetail(drugModel, true))
                 }) {
                     HStack {
                         Image("img_Pill")

@@ -10,6 +10,7 @@ import RealmSwift
 
 struct DrugDetailView: View {
     let drug: DrugModel
+    let isFromSearch: Bool
     
     var body: some View {
         VStack(spacing: 0) {
@@ -53,19 +54,20 @@ Syrup/Suspension:
                 }
             }
             
-            // Sticky Add Button
-            Button(action: {
-                addDrugToRealm(drug)
-                AppCoordinator.shared.popToRoot()
-            }) {
-                Text("Add Medication to List")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(12)
-                    .padding(.horizontal)
-                    .padding(.bottom, 16)
+            if isFromSearch {
+                Button(action: {
+                    addDrugToRealm(drug)
+                    AppCoordinator.shared.popToRoot()
+                }) {
+                    Text("Add Medication to List")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                        .padding(.bottom, 16)
+                }
             }
         }
         .navigationTitle("Details")

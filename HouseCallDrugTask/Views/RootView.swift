@@ -30,8 +30,8 @@ struct RootView: View {
                     SignupView(authViewModel: authViewModel)
                 case .search:
                     SearchView()
-                case .drugDetail(let drug):
-                    DrugDetailView(drug: drug)
+                case .drugDetail(let drug, let isFromSearch):
+                    DrugDetailView(drug: drug, isFromSearch: isFromSearch)
                 }
             }
         }
