@@ -13,7 +13,8 @@ struct SignupView: View {
     @State private var email = ""
     @State private var password = ""
     @ObservedObject var authViewModel: AuthViewModel
-    
+    @EnvironmentObject private var appManager: AppCoordinator
+
     var body: some View {
         VStack {
             // MARK: - Fields Section
@@ -36,8 +37,9 @@ struct SignupView: View {
 
             // MARK: - Create Account Button
             Button(action: {
-                authViewModel.signUp(email: email, password: password) {
-                    AppCoordinator.shared.popToRoot()
+                authViewModel.signUp(email: email, password: password)
+                {
+                    appManager.popToRoot()
                 }
             }) {
                 if authViewModel.isLoading {

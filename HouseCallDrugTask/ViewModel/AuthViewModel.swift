@@ -8,7 +8,6 @@
 import FirebaseAuth
 import Combine
 import RealmSwift
-import SwiftUI
 
 class AuthViewModel: ObservableObject {
     @Published var isAuthenticated = false
@@ -75,11 +74,13 @@ class AuthViewModel: ObservableObject {
         }
     }
 
-    func signOut() {
+    func signOut(completion: (() -> Void)? = nil) {
         do {
             try Auth.auth().signOut()
-            AppCoordinator.shared.path = NavigationPath()
             updateSession(false)
+            DispatchQueue.main.async {
+                completion?()
+            }
         } catch {
             DispatchQueue.main.async {
                 self.errorMessage = error.localizedDescription

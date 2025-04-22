@@ -11,6 +11,7 @@ import RealmSwift
 struct DrugDetailView: View {
     let drug: DrugModel
     let isFromSearch: Bool
+    @EnvironmentObject private var appManager: AppCoordinator
     
     var body: some View {
         VStack(spacing: 0) {
@@ -57,7 +58,7 @@ Syrup/Suspension:
             if isFromSearch {
                 Button(action: {
                     addDrugToRealm(drug)
-                    AppCoordinator.shared.popToRoot()
+                    appManager.popToRoot()
                 }) {
                     Text("Add Medication to List")
                         .frame(maxWidth: .infinity)

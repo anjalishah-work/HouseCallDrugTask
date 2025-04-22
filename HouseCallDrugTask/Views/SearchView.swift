@@ -15,6 +15,7 @@ struct SearchView: View {
     @State private var searchResults: [Drug] = []
     @State private var isLoading = false
     @State private var selectedDrug: DrugModel? = nil
+    @EnvironmentObject private var appManager: AppCoordinator
 
     var body: some View {
         VStack(spacing: 16) {
@@ -50,7 +51,7 @@ struct SearchView: View {
                     drugModel.rxcui = drug.rxcui
                     drugModel.name = drug.name
                     selectedDrug = drugModel
-                    AppCoordinator.shared.push(.drugDetail(drugModel, true))
+                    appManager.push(to: .drugDetail(drugModel, true)) // Use AppCoordinator to navigate
                 }) {
                     HStack {
                         Image("img_Pill")

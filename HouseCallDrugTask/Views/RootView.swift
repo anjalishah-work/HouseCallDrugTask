@@ -9,13 +9,13 @@ import SwiftUI
 
 struct RootView: View {
     @StateObject var authViewModel = AuthViewModel()
-    @StateObject var coordinator = AppCoordinator.shared
+    @StateObject var coordinator = AppCoordinator()
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            Group {
+            ZStack {
                 if authViewModel.isAuthenticated {
-                    MyMedicationsView()
+                    MyMedicationsView(authViewModel: authViewModel)
                 } else {
                     OnboardingView()
                 }
@@ -35,5 +35,6 @@ struct RootView: View {
                 }
             }
         }
+        .environmentObject(coordinator)
     }
 }

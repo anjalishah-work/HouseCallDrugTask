@@ -12,7 +12,8 @@ struct OnboardingView: View {
     @State private var flipped = false
     @State private var flipCount = 0
     let maxFlips = 2
-    
+    @EnvironmentObject private var appManager: AppCoordinator
+
     var body: some View {
         VStack {
             Spacer()
@@ -28,7 +29,7 @@ struct OnboardingView: View {
             Spacer()
             
             Button(action: {
-                AppCoordinator.shared.push(.signup)
+                appManager.push(to: .signup)
             }) {
                 Text("Create New Account")
                     .font(.headline)
@@ -41,7 +42,7 @@ struct OnboardingView: View {
             }
             
             Button(action: {
-                AppCoordinator.shared.push(.login)
+                appManager.push(to: .login)
             }) {
                 Text("I already have an account")
                     .foregroundColor(Color.blue)
@@ -53,7 +54,6 @@ struct OnboardingView: View {
         }
         .background(Color(red: 0.92, green: 0.95, blue: 1.0))
         .edgesIgnoringSafeArea(.all)
-        .navigationBarBackButtonHidden(true)
     }
     
     private func startFlipping() {

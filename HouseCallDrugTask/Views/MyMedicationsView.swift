@@ -11,14 +11,15 @@ import RealmSwift
 struct MyMedicationsView: View {
     @ObservedResults(DrugModel.self) var medications
     @State private var showSignOutAlert = false
-    @ObservedObject var authViewModel = AuthViewModel()
-    
+    @ObservedObject var authViewModel: AuthViewModel
+    @EnvironmentObject private var appManager: AppCoordinator
+
     var body: some View {
         VStack {
             List {
                 ForEach(medications) { med in
                     Button {
-                         AppCoordinator.shared.push(.drugDetail(med,false))
+                        appManager.push(to: .drugDetail(med,false))
                     } label: {
                         HStack {
                             Image("img_Pill")
@@ -36,7 +37,7 @@ struct MyMedicationsView: View {
             Spacer()
             
             Button(action: {
-                AppCoordinator.shared.push(.search)
+                appManager.push(to: .search)
             }) {
                 HStack {
                     Image(systemName: "plus.circle.fill")
@@ -75,6 +76,5 @@ struct MyMedicationsView: View {
     
     private func signOut() {
         authViewModel.signOut()
-        AppCoordinator.shared.popToRoot(.Onboarding)
     }
 }
