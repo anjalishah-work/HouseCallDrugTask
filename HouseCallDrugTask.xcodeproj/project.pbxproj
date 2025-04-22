@@ -12,14 +12,30 @@
 		79828B082DB775A700B17D96 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 79828B072DB775A700B17D96 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		79E0E54B2DB7B45C0076FF09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79828ACD2DB76FE900B17D96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79828AD42DB76FE900B17D96;
+			remoteInfo = HouseCallDrugTask;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		79828AD52DB76FE900B17D96 /* HouseCallDrugTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseCallDrugTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E0E5472DB7B45C0076FF09 /* HouseCallDrugTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseCallDrugTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		79828AD72DB76FEA00B17D96 /* HouseCallDrugTask */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HouseCallDrugTask;
+			sourceTree = "<group>";
+		};
+		79E0E5482DB7B45C0076FF09 /* HouseCallDrugTaskTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HouseCallDrugTaskTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +51,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79E0E5442DB7B45C0076FF09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				79828AD72DB76FEA00B17D96 /* HouseCallDrugTask */,
+				79E0E5482DB7B45C0076FF09 /* HouseCallDrugTaskTests */,
 				79828AD62DB76FE900B17D96 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				79828AD52DB76FE900B17D96 /* HouseCallDrugTask.app */,
+				79E0E5472DB7B45C0076FF09 /* HouseCallDrugTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +107,29 @@
 			productReference = 79828AD52DB76FE900B17D96 /* HouseCallDrugTask.app */;
 			productType = "com.apple.product-type.application";
 		};
+		79E0E5462DB7B45C0076FF09 /* HouseCallDrugTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79E0E54D2DB7B45C0076FF09 /* Build configuration list for PBXNativeTarget "HouseCallDrugTaskTests" */;
+			buildPhases = (
+				79E0E5432DB7B45C0076FF09 /* Sources */,
+				79E0E5442DB7B45C0076FF09 /* Frameworks */,
+				79E0E5452DB7B45C0076FF09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79E0E54C2DB7B45C0076FF09 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				79E0E5482DB7B45C0076FF09 /* HouseCallDrugTaskTests */,
+			);
+			name = HouseCallDrugTaskTests;
+			packageProductDependencies = (
+			);
+			productName = HouseCallDrugTaskTests;
+			productReference = 79E0E5472DB7B45C0076FF09 /* HouseCallDrugTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +142,10 @@
 				TargetAttributes = {
 					79828AD42DB76FE900B17D96 = {
 						CreatedOnToolsVersion = 16.3;
+					};
+					79E0E5462DB7B45C0076FF09 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 79828AD42DB76FE900B17D96;
 					};
 				};
 			};
@@ -116,12 +168,20 @@
 			projectRoot = "";
 			targets = (
 				79828AD42DB76FE900B17D96 /* HouseCallDrugTask */,
+				79E0E5462DB7B45C0076FF09 /* HouseCallDrugTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		79828AD32DB76FE900B17D96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79E0E5452DB7B45C0076FF09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,7 +198,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79E0E5432DB7B45C0076FF09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79E0E54C2DB7B45C0076FF09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79828AD42DB76FE900B17D96 /* HouseCallDrugTask */;
+			targetProxy = 79E0E54B2DB7B45C0076FF09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		79828ADE2DB76FEB00B17D96 /* Debug */ = {
@@ -274,6 +349,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +388,40 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79E0E54E2DB7B45C0076FF09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.task.HouseCallDrugTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HouseCallDrugTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HouseCallDrugTask";
+			};
+			name = Debug;
+		};
+		79E0E54F2DB7B45C0076FF09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.task.HouseCallDrugTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HouseCallDrugTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HouseCallDrugTask";
 			};
 			name = Release;
 		};
@@ -331,6 +442,15 @@
 			buildConfigurations = (
 				79828AE12DB76FEB00B17D96 /* Debug */,
 				79828AE22DB76FEB00B17D96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79E0E54D2DB7B45C0076FF09 /* Build configuration list for PBXNativeTarget "HouseCallDrugTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79E0E54E2DB7B45C0076FF09 /* Debug */,
+				79E0E54F2DB7B45C0076FF09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

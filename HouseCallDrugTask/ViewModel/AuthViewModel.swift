@@ -89,7 +89,6 @@ class AuthViewModel: ObservableObject {
     }
 }
 
-
 class UserSession: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var isAuthenticated: Bool
